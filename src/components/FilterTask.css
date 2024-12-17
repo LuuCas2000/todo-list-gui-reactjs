@@ -1,0 +1,57 @@
+.filter__task {
+    position:relative;
+    width:60%;
+    display:flex;
+    align-self:center;
+    margin-bottom:50px;
+}
+
+.filter__task > .btns__wrapper {
+    position:absolute;
+    width:auto;
+    display:flex;
+    right:0;
+}
+
+.filter__task > .btns__wrapper > .filter__div, .sort__div {
+    width:300px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-left:22px;
+}
+
+.filter__task > .btns__wrapper > div > select {
+    width:280px;
+    padding:8px 8px;
+    outline:none;
+    border:1px solid #ccc;
+    margin-left:8px;
+    border-radius:8px;
+}
+
+.filter__task > .btns__wrapper > div > label {
+    font-size:17px;
+}
+
+.hide_filter_icon {
+    display:none;
+}
+
+@media screen and (max-width: 1025px) {
+    .filter__task {
+        width:90%;
+    }
+
+    .filter__task > .btns__wrapper {
+        width:auto;
+    }
+
+    .filter__task > .btns__wrapper > .hide_filter_icon {
+        display:block;
+    }
+
+    .filter__task > .btns__wrapper > .filter__div, .sort__div {
+        display:none;
+    }
+}

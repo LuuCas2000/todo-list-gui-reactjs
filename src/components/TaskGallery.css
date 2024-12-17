@@ -1,0 +1,19 @@
+.task__gallery {
+    width:100%;
+    margin-bottom:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.task__gallery > .task {
+    width:60%;
+    border:#ccc;
+    margin-bottom:50px;
+}
+
+@media screen and (max-width: 1040px) {
+    .task__gallery > .task {
+        width:90%;
+    }
+}
