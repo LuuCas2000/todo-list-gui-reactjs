@@ -21,6 +21,12 @@ const App = () => {
         setTasks(data.data);
     };
 
+    const addTaskHandler = async (url, task) => {
+        await axios.post(url, { task: task });
+        console.log(task);
+        getData();
+    };
+
     const deleteTaskHandler = async (id) => {
         console.log('clicked');
         await axios.delete(`https://todo-list-api-ec3r.onrender.com/task/delete/${id}`);
@@ -55,7 +61,7 @@ const App = () => {
         <>
         <div className="wrapper">
             <HeaderNav />
-            <SearchEngine />
+            <SearchEngine addTaskHandler={addTaskHandler}/>
             <FilterTask setSortingHandler={setSorting} setFilterCompletedHandler={setFilterCompleted}/>
             <TaskGallery getSorting={getSorting} updateTaskStatusHandler={updateTaskStatusHandler} updateCompletedTaskHandler={updateCompletedTaskHandler} deleteTaskHandler={deleteTaskHandler} tasks={tasks} isCompleted={filterCompleted} sortingHandler={getSorting} />
         </div>
